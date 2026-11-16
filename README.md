@@ -1,6 +1,3 @@
-# index.html
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,7 +20,6 @@
         .hidden { display: none !important; }
         .container { max-width: 1100px; margin: 0 auto; padding: 15px; }
 
-        /* AUTH */
         .auth-box { max-width: 420px; margin: 30px auto; background: var(--card-bg); padding: 25px; border-radius: 12px; border-top: 4px solid var(--f1-red); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .logo-header { text-align: center; margin-bottom: 20px; }
         .f1-tag { background: var(--f1-red); color: white; font-weight: 900; padding: 3px 8px; border-radius: 4px; font-style: italic; }
@@ -38,13 +34,11 @@
         .input-group label { display: block; font-size: 0.85rem; margin-bottom: 5px; color: var(--text-muted); }
         .input-group input { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: #12121a; color: white; font-size: 1rem; }
 
-        /* BUTTONS */
         .btn-primary { width: 100%; padding: 14px; background: var(--f1-red); color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1rem; }
         .btn-secondary { padding: 10px 14px; background: #2e2e42; color: white; border: 1px solid var(--border-color); border-radius: 6px; cursor: pointer; }
         .btn-large { margin-top: 20px; font-size: 1.1rem; }
         .btn-logout { background: transparent; border: 1px solid var(--f1-red); color: var(--f1-red); padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-left: 8px; font-size: 0.8rem; }
 
-        /* NAVBAR & MENU */
         .navbar { background: #0f0f15; padding: 12px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--f1-red); flex-wrap: wrap; gap: 8px; }
         .badge { padding: 3px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-right: 5px; text-transform: uppercase; }
         .badge-supreme { background: var(--gold); color: black; }
@@ -56,12 +50,10 @@
         .menu-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 12px; cursor: pointer; font-weight: bold; border-radius: 6px; font-size: 0.85rem; }
         .menu-btn.active { background: #2c2c3e; color: white; }
 
-        /* GP BANNER */
         .gp-banner { background: linear-gradient(90deg, #252536, #1b1b26); padding: 15px; border-radius: 10px; border-left: 5px solid var(--f1-red); display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
         .gp-label { font-size: 0.7rem; color: var(--f1-red); font-weight: bold; letter-spacing: 1px; }
         .status-open { background: rgba(0, 210, 106, 0.2); color: var(--green); padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
 
-        /* GRID DE APOSTAS */
         .instruction { color: var(--text-muted); margin-bottom: 12px; font-size: 0.9rem; }
         .grid-form { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
         .pos-row { background: var(--card-bg); padding: 10px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--border-color); }
@@ -69,7 +61,6 @@
         .pos-pts { font-size: 0.75rem; color: var(--text-muted); margin-right: 8px; }
         .pos-row select { flex: 1; padding: 8px; background: #12121a; color: white; border: 1px solid var(--border-color); border-radius: 5px; font-size: 0.9rem; }
 
-        /* DIVISÕES */
         .cycle-info { background: var(--card-bg); padding: 15px; border-radius: 8px; margin-bottom: 15px; text-align: center; border: 1px solid var(--border-color); }
         .divisions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         @media (max-width: 768px) { .divisions-grid { grid-template-columns: 1fr; } }
@@ -83,7 +74,6 @@
         .zone-up { border-left: 4px solid var(--green); }
         .zone-down { border-left: 4px solid var(--f1-red); }
 
-        /* PONTUAÇÃO & ADMIN */
         .points-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 12px; }
         .point-box { background: var(--card-bg); padding: 10px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color); }
         .admin-card { background: var(--card-bg); padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid var(--border-color); }
@@ -97,7 +87,6 @@
     </style>
 </head>
 <body>
-    <!-- TELA DE LOGIN / CADASTRO -->
     <div id="auth-screen" class="container auth-box">
         <div class="logo-header">
             <span class="f1-tag">F1</span>
@@ -136,7 +125,6 @@
         <p id="auth-error" class="error-msg"></p>
     </div>
 
-    <!-- PAINEL PRINCIPAL DO JOGO -->
     <div id="app-screen" class="hidden">
         <header class="navbar">
             <div class="nav-brand">
@@ -160,3 +148,7 @@
             <section id="bet-section">
                 <div class="gp-banner">
                     <div>
+                        <span class="gp-label">PRÓXIMO GRANDE PRÊMIO</span>
+                        <h2 id="current-gp-title">GP de Las Vegas</h2>
+                        <p id="current-gp-date">Data: 22 de Novembro de 2026</p>
+                    </div>
